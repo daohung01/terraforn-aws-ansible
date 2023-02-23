@@ -34,8 +34,8 @@ resource "aws_instance" "ansible_server" {
     inline = [
       "sudo apt update -y",
       "sudo apt install -y apache2",
-      "sudo systemctl enable apache2.service",
-      "sudo systemctl start apache2.service"
+      "sudo service apache2 enable",
+      "sudo service apache2 enable"
     ]
   }
   connection {
